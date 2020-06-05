@@ -5,8 +5,8 @@ Dotfiles are managed using [Dotbot](https://github.com/anishathalye/dotbot). Inf
 ## Installation
 
 ```bash
-git clone --recurse-submodules git@github.com:link00000000/dotfiles $HOME/.dotfiles
+$ git clone --recurse-submodules git@github.com:link00000000/dotfiles $HOME/.dotfiles
 
-$HOME/.dotfiles/install
+$ $HOME/.dotfiles/install
 ```
 
