@@ -20,7 +20,7 @@ Neovim replaces normal vim due the the increased performance neovim provides as 
 
 Tmux is used to manage multiple panes easily. To make it interact more smoothly with neovim, vim keybinds are enabled through the Tmux config.
 
-[tmux](https://i.imgur.com/YfARaZk.png)
+![tmux](https://i.imgur.com/YfARaZk.png)
 
 ### WSL2 Integration
 
