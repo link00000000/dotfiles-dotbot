@@ -53,7 +53,13 @@
 - shell:
     - command: ./scripts/install-neovim.sh
       stderr: true
+      stdout: true
+      stdin: true
     - command: ./scripts/install-tmux.sh
       stderr: true
+      stdout: true
+      stdin: true
     - command: ./scripts/install-fish.sh
       stderr: true
+      stdout: true
+      stdin: true
