@@ -43,6 +43,7 @@
 
     # Tmux config files
     ~/.tmux/.tmux.conf: tmux/.tmux.conf
+    ~/.tmux.conf: tmux/.tmux.conf
     ~/.tmux/.tmux.conf.local: tmux/.tmux.conf.local
     ~/.tmux.conf.local: tmux/.tmux.conf.local
 
