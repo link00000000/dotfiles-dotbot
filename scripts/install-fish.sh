@@ -14,4 +14,7 @@ $(which fish) -c fisher
 # Install base16-shell
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
 
+# Install pyenv
+git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
+
 exec $(which fish)
