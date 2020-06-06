@@ -4,10 +4,10 @@
     ~/.gitconfig: gitconfig
 
 - shell:
-    command: sudo apt-add-repository -y ppa:fish-shell/release-3
-    stdin: true
-    stdout: true
-    description: Add fish repository
+    - command: sudo apt-add-repository -y ppa:fish-shell/release-3
+      stdin: true
+      stdout: true
+      description: Add fish repository
 
 - apt:
     - fish
