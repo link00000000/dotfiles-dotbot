@@ -16,6 +16,12 @@ Neovim replaces normal vim due the the increased performance neovim provides as 
 
 ![neovim](https://i.imgur.com/QVVUM1X.png)
 
+### Tmux
+
+Tmux is used to manage multiple panes easily. To make it interact more smoothly with neovim, vim keybinds are enabled through the Tmux config.
+
+[tmux](https://i.imgur.com/YfARaZk.png)
+
 ### WSL2 Integration
 
 Intended to be used with WSL2 with VcXsrv running on the host. The display will automatically be mapped to VcXsrv on the host without having to set the host manually each time it changes in WSL. If VcXsrv is running, the `xsel` command is bound to the windows clipboard. `xsel` is also bound the the vim buffer, so any value copied to the clipboard is available in vim using the hotkeys and anything yanked from vim is available on the windows clipboard.
