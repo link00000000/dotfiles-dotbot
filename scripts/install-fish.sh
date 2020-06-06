@@ -17,4 +17,7 @@ git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shel
 # Install pyenv
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 
+# Install nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+
 echo "Run `echo $(which fish)` to start using the new config files"
