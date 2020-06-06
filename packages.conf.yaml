@@ -1,9 +1,0 @@
-- shell:
-    - command: sudo apt-add-repository -y ppa:fish-shell/release-3
-      description: Add fish repository
-
-- apt:
-    - fish
-    - curl
-    - tmux
-    - neovim

@@ -1,7 +1,58 @@
-- clean: ['~']
+- clean:
+    - '~'
+    - '~/.config'
+    - '~/.config/fish'
+    - '~/.config/fish/completions'
+    - '~/.config/fish/conf.d'
+    - '~/.config/fish/functions'
+    - '~/.config/git'
+    - '~/.config/nvim'
+    - '~/.config/tmux'
+    - '~/.tmux'
+    - '~/.ssh'
+
+- defaults:
+    link:
+      create: true
+      force: true
+      relink: true
+    
+- create:
+    - '~/.config'
+    - '~/.tmux'
 
 - link:
-    ~/.gitconfig: gitconfig
+    # Fish shell config files
+    ~/.config/fish/config.fish: fish/config.fish
+    ~/.config/fish/fishfile: fish/fishfile
+    ~/.config/fish/conf.d:
+      path: fish/conf.d/*.fish
+      glob: true
+    ~/.config/fish/functions:
+      path: fish/functions/*.fish
+      glob: true
+    ~/.config/fish/completions:
+      path: fish/completions/*.fish
+      glob: true
+    
+    # Neovim config files
+    ~/.config/nvim/init.vim: neovim/init.vim
 
+    # Git config files
+    ~/.gitconfig: git/.gitconfig
 
+    # Tmux config files
+    ~/.tmux/.tmux.conf: tmux/.tmux.conf
+    ~/.tmux/.tmux.conf.local: tmux/.tmux.conf.local
+    ~/.tmux.conf.local: tmux/.tmux.conf.local
 
+    # SSH config files
+    ~/.ssh/config: ssh/config
+
+- shell:
+    - command: ./scripts/install-neovim.sh
+      stderr: true
+    - command: ./scripts/install-tmux.sh
+      stderr: true
+    - command: ./scripts/install-fish.sh
+      stderr: true

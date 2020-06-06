@@ -1,9 +1,0 @@
-- shell:
-    - command: mkdir -p $HOME/.tmux
-
-- link:
-    ~/.tmux/.tmux.conf: tmux.conf
-    ~/.tmux/.tmux.conf.local: tmux.conf.local
-
-- shell:
-    - command: ln -s $HOME/.tmux/.tmux.conf.local $HOME/.tmux.conf.local
