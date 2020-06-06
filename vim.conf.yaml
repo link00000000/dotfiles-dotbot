@@ -1,0 +1,10 @@
+- shell:
+    - command: sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+      description: Install vim-plug for neovim
+    - command: mkdir -p $HOME/.config/nvim
+
+- link:
+    ~/.config/nvim/init.vim: init.vim
+
+- shell:
+    command: echo Be sure to run :PlugInstall inside vim

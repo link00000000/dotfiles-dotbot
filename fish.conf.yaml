@@ -1,0 +1,13 @@
+- shell:
+    - command: curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
+      description: Install fisher
+    - command: fisher add edc/bass
+    - command: fisher add FabioAntunes/fish-nvm
+    - command: fisher add jorgebucaran/fish-bax
+    - command: fisher add joseluisq/gitnow
+    - command: fisher add laughedelic/pisces
+    - command: fisher add oh-my-fish/plugin-bang-bang
+    - command: fisher add rafaelrinaldi/pure
+
+- link:
+    ~/.config/fish/config.fish: config.fish
