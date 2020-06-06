@@ -270,6 +270,9 @@ set -g history-limit 10000
 # automatically kill tmux session when all connections are detatched
 set -g destroy-unattached
 
+# enable mouse input
+set -g mouse on
+
 # Throttle scroll speed when using trackpad for reasonable scroll speeds
 bind -Tcopy-mode WheelUpPane send -N1 -X scroll-up
 bind -Tcopy-mode WheelDownPane send -N1 -X scroll-down
