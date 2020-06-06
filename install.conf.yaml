@@ -3,5 +3,8 @@
 - link:
     ~/.gitconfig: gitconfig
 
+- shell:
+    command: sudo apt-add-repository -y ppa:fish-shell/release-3
+
 - apt:
     - fish
