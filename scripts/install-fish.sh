@@ -17,4 +17,4 @@ git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shel
 # Install pyenv
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 
-exec $(which fish)
+echo "Run `echo $(which fish)` to start using the new config files"
