@@ -46,6 +46,12 @@ cd $HOME/.dotfiles &&\
 ./install
 ```
 
+## Tips
+
+### Windows hotkeys
+
+Personally, I like to have my terminal bound to `Win + T`. By default, Windows does not have support for custom global hotkeys. A workaround is to install [PowerToys](https://github.com/microsoft/PowerToys). PowerToys supports remapping certain keyboard hotkeys to others. For example, pinning the terminal to the taskbar at location three and mapping `Win + T` to `Win + Shift + 3` will open a new instance of the terminal when `Win + T` is pressed.
+
 ### Weird glyphs
 
 Some of the glyphs will be missing when using a regular font. This is because some of the fish and vim plugins require a patched [Nerd Font](https://www.nerdfonts.com/) to display correctly. Prepatched Nerd Fonts can be downloaded and it is possible to manually patch any font.
