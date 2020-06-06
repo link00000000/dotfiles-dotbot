@@ -7,7 +7,3 @@
     - curl
     - tmux
     - neovim
-
-- shell:
-    - command: chsh -s $(which fish)
-      description: Change default shell to fish
