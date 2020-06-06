@@ -3,12 +3,5 @@
 - link:
     ~/.gitconfig: gitconfig
 
-- shell:
-    - command: sudo apt-add-repository -y ppa:fish-shell/release-3
-      description: Add fish repository
 
-- apt:
-    - fish
 
-- shell:
-    - command: chsh -s $(which fish)

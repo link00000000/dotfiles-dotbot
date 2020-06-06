@@ -7,7 +7,9 @@ Dotfiles are managed using [Dotbot](https://github.com/anishathalye/dotbot). Inf
 ```bash
 $ git clone --recurse-submodules git@github.com:link00000000/dotfiles $HOME/.dotfiles
 
-$ sudo $HOME/.dotfiles/install -p $HOME/.dotfiles/dotbot-apt/apt.py
+$ cd $HOME/.dotfiles
+
+$ ./setup.sh
 ```
 
 ### VSCode
