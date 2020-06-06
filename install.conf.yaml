@@ -9,3 +9,6 @@
 
 - apt:
     - fish
+
+- shell:
+    - command: chsh -s $(which fish)
