@@ -2,7 +2,7 @@
 
 Dotfiles are managed using [Dotbot](https://github.com/anishathalye/dotbot). Information on how to modify dotfile management can be found on the dotbot repo.
 
-Intended to be used with WSL2 with VcXsrv running on the host. If VcXsrv is running, the `xsel` command is bound to the windows clipboard. `xsel` is also bound the the vim buffer, so any value copied to the clipboard is available in vim using the hotkeys and anything yanked from vim is available on the windows clipboard.
+Intended to be used with WSL2 with VcXsrv running on the host. The display will automatically be mapped to VcXsrv on the host without having to set the host manually each time it changes in WSL. If VcXsrv is running, the `xsel` command is bound to the windows clipboard. `xsel` is also bound the the vim buffer, so any value copied to the clipboard is available in vim using the hotkeys and anything yanked from vim is available on the windows clipboard.
 
 ```
 # Copy "Hello world" to the Windows clipboard
