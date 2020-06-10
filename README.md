@@ -38,7 +38,7 @@ xsel -o | cat
 
 #### Fingerprint Authentication
 
-Instead of typing the user password to authenticate when using commands that require root, a prompt for a finger print is used and the user is authenticated using the built in fingerprint scanner. This is done using [https://github.com/nullpo-head/WSL-Hello-sudo](WSL Hello sudo). Instructions for installation can be found on the repo page.
+Instead of typing the user password to authenticate when using commands that require root, a prompt for a finger print is used and the user is authenticated using the built in fingerprint scanner. This is done using [WSL Hello sudo](https://github.com/nullpo-head/WSL-Hello-sudo). Instructions for installation can be found on the repo page.
 
 ## Installation
 
