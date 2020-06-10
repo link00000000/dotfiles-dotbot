@@ -24,6 +24,8 @@ Tmux is used to manage multiple panes easily. To make it interact more smoothly 
 
 ### WSL2 Integration
 
+#### Clipboard
+
 Intended to be used with WSL2 with VcXsrv running on the host. The display will automatically be mapped to VcXsrv on the host without having to set the host manually each time it changes in WSL. If VcXsrv is running, the `xsel` command is bound to the windows clipboard. `xsel` is also bound the the vim buffer, so any value copied to the clipboard is available in vim using the hotkeys and anything yanked from vim is available on the windows clipboard.
 
 ```
@@ -33,6 +35,10 @@ echo Hello world | xsel -i
 # Print the Windows clipboard to the command line
 xsel -o | cat
 ```
+
+#### Fingerprint Authentication
+
+Instead of typing the user password to authenticate when using commands that require root, a prompt for a finger print is used and the user is authenticated using the built in fingerprint scanner. This is done using [https://github.com/nullpo-head/WSL-Hello-sudo](WSL Hello sudo). Instructions for installation can be found on the repo page.
 
 ## Installation
 
