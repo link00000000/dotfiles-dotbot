@@ -40,6 +40,10 @@ xsel -o | cat
 
 Instead of typing the user password to authenticate when using commands that require root, a prompt for a finger print is used and the user is authenticated using the built in fingerprint scanner. This is done using [WSL Hello sudo](https://github.com/nullpo-head/WSL-Hello-sudo). ~~Instructions for installation can be found on the repo page.~~ This is installed using Dotbot.
 
+#### DNS Resolution Errors
+
+WSL 2 seems to have issues when resolve DNS through the host, which is the default setting. Dotbot will automatically patch WSL 2 to using `8.8.8.8` and `8.8.4.4` as the DNS servers instead.
+
 ## Installation
 
 You may be prompted multiple times for the user password. Also, to install vim plugins, vim is opened by the script. Once all plugins have been installed, just close vim and the installation will continue. Once complete, restart the terminal for everything to take effect.
