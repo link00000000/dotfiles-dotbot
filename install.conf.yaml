@@ -8,8 +8,8 @@
     - '~/.config/git'
     - '~/.config/nvim'
     - '~/.config/tmux'
-    - '~/.tmux'
     - '~/.ssh'
+    - '~/.tmux'
 
 - defaults:
     link:
@@ -41,14 +41,19 @@
     # Git config files
     ~/.gitconfig: git/.gitconfig
 
+    # SSH config files
+    ~/.ssh/config: ssh/config
+
     # Tmux config files
     ~/.tmux/.tmux.conf: tmux/.tmux.conf
     ~/.tmux.conf: tmux/.tmux.conf
     ~/.tmux/.tmux.conf.local: tmux/.tmux.conf.local
     ~/.tmux.conf.local: tmux/.tmux.conf.local
 
-    # SSH config files
-    ~/.ssh/config: ssh/config
+    # WSL
+    /etc/pam.d/sudo: wsl/sudo
+    /etc/wsl.conf: wsl/wsl.conf
+    /etc/resolv.conf: wsl/resolv.conf
 
 - shell:
     - command: ./scripts/install-neovim.sh
