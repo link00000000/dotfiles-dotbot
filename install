@@ -2,7 +2,7 @@
 
 set -e
 
-CONFIG="install.conf.yaml"
+CONFIG="sudo.conf.yaml"
 DOTBOT_DIR="dotbot"
 
 DOTBOT_BIN="bin/dotbot"
@@ -14,4 +14,6 @@ git submodule update --init --recursive "${DOTBOT_DIR}"
 
 sudo "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
 
-"${BASEDIR}/scripts/install-wsl-hello-sudo.sh"
+CONFIG="install.conf.yaml"
+"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
+

@@ -50,11 +50,6 @@
     ~/.tmux/.tmux.conf.local: tmux/.tmux.conf.local
     ~/.tmux.conf.local: tmux/.tmux.conf.local
 
-    # WSL
-    /etc/pam.d/sudo: wsl/sudo
-    /etc/wsl.conf: wsl/wsl.conf
-    /etc/resolv.conf: wsl/resolv.conf
-
 - shell:
     - command: ./scripts/install-neovim.sh
       stderr: true
