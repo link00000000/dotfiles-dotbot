@@ -26,3 +26,11 @@ pyenv init - | source
 
 # have windows handle the default browser
 set -x DISPLAY "explorer.exe"
+
+# WSL shortcut aliases
+alias explorer="explorer.exe"
+alias e="explorer.exe"
+alias gsudo="gsudo.exe"
+alias powershell="pwsh.exe"
+alias pwsh="pwsh.exe"
+alias choco="gsudo.exe choco"
