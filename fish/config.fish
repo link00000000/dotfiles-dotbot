@@ -25,7 +25,7 @@ set -Ux fish_user_paths $PYENV_ROOT/bin $fish_user_paths
 pyenv init - | source
 
 # have windows handle the default browser
-set -x DISPLAY "explorer.exe"
+set -x BROWSER "explorer.exe"
 
 # WSL shortcut aliases
 alias explorer="explorer.exe"
