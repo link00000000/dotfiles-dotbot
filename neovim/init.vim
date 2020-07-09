@@ -19,6 +19,9 @@ set cursorline
 " Enable mouse mode
 set mouse=a
 
+" Fix indentation of paste
+set paste
+
 " Always show signcolumns left of line numbers
 set signcolumn=yes
 
