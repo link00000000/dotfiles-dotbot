@@ -273,6 +273,9 @@ set -g destroy-unattached
 # enable mouse input
 set -g mouse on
 
+# disable right click context menu
+unbind-key -T root MouseDown3Pane
+
 # Throttle scroll speed when using trackpad for reasonable scroll speeds
 bind -Tcopy-mode WheelUpPane send -N1 -X scroll-up
 bind -Tcopy-mode WheelDownPane send -N1 -X scroll-down
