@@ -27,6 +27,16 @@ pyenv init - | source
 # have windows handle the default browser
 set -x BROWSER "explorer.exe"
 
+# Aliases
+alias ls="ls -lh --color"
+
+# Git aliases
+alias checkout="git checkout"
+alias branch="git branch"
+alias commit="commit -m"
+alias add="git add"
+alias merge="git merge"
+
 # WSL shortcut aliases
 alias explorer="explorer.exe"
 alias e="explorer.exe"
