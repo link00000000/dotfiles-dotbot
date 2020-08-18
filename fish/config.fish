@@ -33,7 +33,7 @@ alias ls="ls -lh --color"
 # Git aliases
 alias checkout="git checkout"
 alias branch="git branch"
-alias commit="commit -m"
+alias commit="git commit -m"
 alias add="git add"
 alias merge="git merge"
 
