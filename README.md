@@ -2,7 +2,15 @@
 
 Dotfiles are managed using [Dotbot](https://github.com/anishathalye/dotbot). Information on how to modify dotfile management can be found on the dotbot repo.
 
-## Features
+## To do
+
+* Docker
+* Build tools / build essentials / make / cmake
+* Clean + more aliases (less command color)
+* Clean up vim config and vim files
+* Add hosts to ssh/config
+
+## Features (Modules)
 
 ### Fish
 
@@ -28,7 +36,7 @@ Tmux is used to manage multiple panes easily. To make it interact more smoothly 
 
 Intended to be used with WSL2 with VcXsrv running on the host. The display will automatically be mapped to VcXsrv on the host without having to set the host manually each time it changes in WSL. If VcXsrv is running, the `xsel` command is bound to the windows clipboard. `xsel` is also bound the the vim buffer, so any value copied to the clipboard is available in vim using the hotkeys and anything yanked from vim is available on the windows clipboard.
 
-```
+``` 
 # Copy "Hello world" to the Windows clipboard
 echo Hello world | xsel -i
 
@@ -48,9 +56,9 @@ WSL 2 seems to have issues when resolve DNS through the host, which is the defau
 
 You may be prompted multiple times for the user password. Also, to install vim plugins, vim is opened by the script. Once all plugins have been installed, just close vim and the installation will continue. Once complete, restart the terminal for everything to take effect.
 
-**NOTE**: You CANNOT simply run `exec $(which fish)`. A full restart of the terminal is required.
+**NOTE**: You CANNOT simply run `exec $(which fish)` . A full restart of the terminal is required.
 
-```bash
+``` bash
 git clone --recurse-submodules git@github.com:link00000000/dotfiles $HOME/.dotfiles &&\
 cd $HOME/.dotfiles &&\
 ./install
@@ -60,7 +68,7 @@ cd $HOME/.dotfiles &&\
 
 ### Windows hotkeys
 
-Personally, I like to have my terminal bound to `Win + T`. By default, Windows does not have support for custom global hotkeys. A workaround is to install [PowerToys](https://github.com/microsoft/PowerToys). PowerToys supports remapping certain keyboard hotkeys to others. For example, pinning the terminal to the taskbar at location three and mapping `Win + T` to `Win + Shift + 3` will open a new instance of the terminal when `Win + T` is pressed.
+Personally, I like to have my terminal bound to `Win + T` . By default, Windows does not have support for custom global hotkeys. A workaround is to install [PowerToys](https://github.com/microsoft/PowerToys). PowerToys supports remapping certain keyboard hotkeys to others. For example, pinning the terminal to the taskbar at location three and mapping `Win + T` to `Win + Shift + 3` will open a new instance of the terminal when `Win + T` is pressed.
 
 ### Weird glyphs
 

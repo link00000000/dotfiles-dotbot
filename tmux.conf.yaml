@@ -1,0 +1,21 @@
+- defaults:
+    link:
+      create: true
+      force: true
+      relink: true
+
+- clean:
+  - '~/.tmux'
+
+- create:
+  - '~/.tmux'
+
+- link:
+  ~/.tmux/.tmux.conf: tmux/.tmux.conf
+  ~/.tmux.conf: tmux/.tmux.conf
+  ~/.tmux/.tmux.conf.local: tmux/.tmux.conf.local
+  ~/.tmux.conf.local: tmux/.tmux.conf.local
+
+- shell:
+  - command: ./tmux/install.sh
+    stderr: true

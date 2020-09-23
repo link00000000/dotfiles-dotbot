@@ -1,10 +1,7 @@
 #!/usr/bin/env bash
 
-set -e
-
-CONFIG="sudo.conf.yaml"
+# initialize dotbot
 DOTBOT_DIR="dotbot"
-
 DOTBOT_BIN="bin/dotbot"
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
@@ -12,8 +9,37 @@ cd "${BASEDIR}"
 git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
 git submodule update --init --recursive "${DOTBOT_DIR}"
 
-sudo "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
+# ensure running as root
+# https://blog.rodneyrehm.de/archives/36-Always-Run-Script-As-Root.html
+if [ "$(id -u)" != "0" ]; then
+  exec sudo "$0" "$@"
+fi
 
-CONFIG="install.conf.yaml"
-"${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
+set -e
+
+# Install dialog if it doesn't exist
+if ! command -v dialog &> /dev/null; then
+    apt update -y
+    apt install dialog
+fi
+
+# user select modules to install
+available_modules=$(
+    find *.conf.yaml | \
+    grep -oE --color="never" "^[^_][^\.]*" | \
+    awk '{print $1, "off"}'
+)
+
+modules=$(dialog \
+    --title "Select modules" \
+    --stdout \
+    --no-items \
+    --ok-label "Install modules" \
+    --checklist "Select modules" 22 76 16 $available_modules
+)
+
+for module in $modules; do \
+    CONFIG="$module.conf.yaml"
+    "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
+done
 

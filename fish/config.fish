@@ -21,7 +21,8 @@ set -x VISUAL vim
 
 # pyenv
 set -Ux PYENV_ROOT $HOME/.pyenv
-set -Ux fish_user_paths $PYENV_ROOT/bin $fish_user_paths
+# The following line has been commented because it should only be run once
+#set -Ux fish_user_paths $PYENV_ROOT/bin $fish_user_paths
 pyenv init - | source
 
 # have windows handle the default browser
@@ -44,3 +45,11 @@ alias gsudo="gsudo.exe"
 alias powershell="pwsh.exe"
 alias pwsh="pwsh.exe"
 alias choco="gsudo.exe choco"
+
+# python aliases
+alias pip="python3 -m pip"
+alias pipenv="python3 -m pipenv"
+
+# java jre / jdk
+set -Ux JDK_HOME /usr/lib/jvm/java-11-openjdk-amd64
+
