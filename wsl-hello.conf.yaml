@@ -6,7 +6,7 @@
     
 - link:
     # WSL
-    /etc/pam.d/sudo: wsl/sudo
+    /etc/pam.d/sudo: ./wsl-hello/sudo
 
 - shell:
     - command: ./wsl-hello/install.sh

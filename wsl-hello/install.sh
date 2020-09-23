@@ -8,4 +8,5 @@ curl -Ls $wsl_hello_url | tar xz --strip-components=1 -C ./release
 cd ./release
 ./install.sh
 
-rm -rf ./release
+
+rm -rf ../release

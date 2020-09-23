@@ -38,6 +38,10 @@ modules=$(dialog \
     --checklist "Select modules" 22 76 16 $available_modules
 )
 
+# Clear the screen after the dialog
+clear
+
+# Install selected modules
 for module in $modules; do \
     CONFIG="$module.conf.yaml"
     "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
