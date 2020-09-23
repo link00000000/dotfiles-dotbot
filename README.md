@@ -24,6 +24,16 @@ Tmux is used to manage multiple panes easily. To make it interact more smoothly 
 
 ### WSL2 Integration
 
+#### VcXsrv
+
+For many integration features, VcXsrv must be installed and running on the Windows host. After installing, the following command can be used to start VcXsrv with the correct settings.
+
+```cmd
+vcxsrv.exe -ac -clipboard -multiwindow -wgl -noprimary -notrayicon
+```
+
+Adding this to a shortcut and placing the shortcut in the `shell:startup` file of Windows will ensure that VcXsrv is launched in the background at startup.
+
 #### Clipboard
 
 Intended to be used with WSL2 with VcXsrv running on the host. The display will automatically be mapped to VcXsrv on the host without having to set the host manually each time it changes in WSL. If VcXsrv is running, the `xsel` command is bound to the windows clipboard. `xsel` is also bound the the vim buffer, so any value copied to the clipboard is available in vim using the hotkeys and anything yanked from vim is available on the windows clipboard.
@@ -43,6 +53,8 @@ Instead of typing the user password to authenticate when using commands that req
 #### DNS Resolution Errors
 
 WSL 2 seems to have issues when resolve DNS through the host, which is the default setting. Dotbot will automatically patch WSL 2 to using `8.8.8.8` and `8.8.4.4` as the DNS servers instead.
+
+> ⚠ This will cause issues when connected to VcXsrv on the Windows host since connection relies on getting the host's IP address from this file. It is recommended that you find some other way of establishing an VcXsrv connection if this is changed.
 
 ## Installation
 
