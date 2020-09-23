@@ -9,11 +9,7 @@
     /etc/pam.d/sudo: wsl/sudo
 
 - shell:
-    - command: ./scripts/install-wsl-fixes.sh
+    - command: ./wsl-hello/install.sh
       stderr: true
       stdout: false
       stdin: false
-    - command: ./scripts/install-wsl-hello-sudo.sh
-      stderr: true
-      stdout: true
-      stdin: true

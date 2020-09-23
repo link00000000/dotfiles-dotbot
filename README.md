@@ -4,7 +4,6 @@ Dotfiles are managed using [Dotbot](https://github.com/anishathalye/dotbot). Inf
 
 ## To do
 
-* Docker
 * Build tools / build essentials / make / cmake
 * Clean + more aliases (less command color)
 * Clean up vim config and vim files
@@ -50,7 +49,7 @@ Instead of typing the user password to authenticate when using commands that req
 
 #### DNS Resolution Errors
 
-WSL 2 seems to have issues when resolve DNS through the host, which is the default setting. Dotbot will automatically patch WSL 2 to using `8.8.8.8` and `8.8.4.4` as the DNS servers instead.
+WSL 2 seems to have issues when resolve DNS through the host, which is the default setting. This can be changed in WSL 2 by using `8.8.8.8` and `8.8.4.4` as the DNS servers instead by modifying `/etc/resolv.conf`. It is required that you also edit `/etc/wsl.conf` also to prevent the changes from being overriden on restart.
 
 ## Installation
 
