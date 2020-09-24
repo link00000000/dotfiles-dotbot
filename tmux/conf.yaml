@@ -11,10 +11,10 @@
     - "~/.tmux"
 
 - link:
-  ~/.tmux/.tmux.conf: tmux/.tmux.conf
-  ~/.tmux.conf: tmux/.tmux.conf
-  ~/.tmux/.tmux.conf.local: tmux/.tmux.conf.local
-  ~/.tmux.conf.local: tmux/.tmux.conf.local
+    ~/.tmux/.tmux.conf: tmux/.tmux.conf
+    ~/.tmux.conf: tmux/.tmux.conf
+    ~/.tmux/.tmux.conf.local: tmux/.tmux.conf.local
+    ~/.tmux.conf.local: tmux/.tmux.conf.local
 
 - shell:
     - command: ./tmux/install.sh

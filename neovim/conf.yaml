@@ -1,16 +1,16 @@
 - defaults:
-  link:
-    create: true
-    force: true
-    relink: true
+    link:
+      create: true
+      force: true
+      relink: true
 
 - clean:
-    - "~/.config/nvim"
+    - '~/.config/nvim'
 
 - link:
-  ~/.config/nvim/:
-    path: neovim/*.vim
-    glob: true
+    ~/.config/nvim/:
+      path: neovim/*.vim
+      glob: true
 
 - shell:
     - command: ./fish/install.sh
