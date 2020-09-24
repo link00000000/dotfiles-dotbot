@@ -1,0 +1,14 @@
+Host cronus
+    Hostname cronus.accidentallycoded.com
+    User logan
+    ForwardAgent yes
+
+Host knuth
+    Hostname knuth.cs.uakron.edu
+    User lrc51
+    ForwardAgent yes
+
+Host devops
+    Hostname 45.33.88.151
+    User lrc51
+    ForwardAgent yes
