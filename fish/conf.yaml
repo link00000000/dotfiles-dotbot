@@ -5,7 +5,7 @@
     relink: true
 
 - clean:
-  - '~/.config/fish'
+    - "~/.config/fish"
 
 - link:
     ~/.config/fish/config.fish: fish/config.fish
@@ -21,7 +21,7 @@
       glob: true
 
 - shell:
-  - command: ./fish/install.sh
-    stderr: true
-    stdout: true
-    stdin: true
+    - command: ./fish/install.sh
+      stderr: true
+      stdout: true
+      stdin: true

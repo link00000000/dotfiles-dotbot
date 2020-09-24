@@ -25,9 +25,10 @@ fi
 
 # user select modules to install
 available_modules=$(
-    find *.conf.yaml | \
-    grep -oE --color="never" "^[^_][^\.]*" | \
-    awk '{print $1, "off"}'
+    find . -name "conf.yaml" \
+    | cut -d "/" -f 2 \
+    | sort \
+    | awk '{print $1, "off"}'
 )
 
 modules=$(dialog \
@@ -43,7 +44,7 @@ clear
 
 # Install selected modules
 for module in $modules; do \
-    CONFIG="$module.conf.yaml"
+    CONFIG="$module/conf.yaml"
     "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
 done
 

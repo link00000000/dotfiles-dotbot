@@ -1,12 +1,12 @@
 - defaults:
-    link:
-      create: true
-      force: true
-      relink: true
-    
+  link:
+    create: true
+    force: true
+    relink: true
+
 - link:
-    # WSL
-    /etc/pam.d/sudo: ./wsl-hello/sudo
+  # WSL
+  /etc/pam.d/sudo: ./wsl-hello/sudo
 
 - shell:
     - command: ./wsl-hello/install.sh

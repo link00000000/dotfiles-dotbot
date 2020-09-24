@@ -5,10 +5,10 @@
       relink: true
 
 - clean:
-  - '~/.tmux'
+    - "~/.tmux"
 
 - create:
-  - '~/.tmux'
+    - "~/.tmux"
 
 - link:
   ~/.tmux/.tmux.conf: tmux/.tmux.conf
@@ -17,5 +17,5 @@
   ~/.tmux.conf.local: tmux/.tmux.conf.local
 
 - shell:
-  - command: ./tmux/install.sh
-    stderr: true
+    - command: ./tmux/install.sh
+      stderr: true

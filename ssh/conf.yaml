@@ -5,7 +5,7 @@
     relink: true
 
 - clean:
-  - '~/.ssh'
+    - "~/.ssh"
 
 - link:
   ~/.ssh/config: ssh/config
