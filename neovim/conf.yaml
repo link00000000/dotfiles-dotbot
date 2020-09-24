@@ -11,9 +11,12 @@
     ~/.config/nvim/:
       path: neovim/*.vim
       glob: true
+    ~/.config/nvim/plugins:
+      path: neovim/plugins/*.vim
+      glob: true
 
 - shell:
-    - command: ./fish/install.sh
+    - command: ./neovim/install.sh
       stderr: true
       stdout: true
       stdin: true
