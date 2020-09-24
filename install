@@ -9,18 +9,10 @@ cd "${BASEDIR}"
 git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
 git submodule update --init --recursive "${DOTBOT_DIR}"
 
-# ensure running as root
-# https://blog.rodneyrehm.de/archives/36-Always-Run-Script-As-Root.html
-if [ "$(id -u)" != "0" ]; then
-  exec sudo "$0" "$@"
-fi
-
-set -e
-
 # Install dialog if it doesn't exist
 if ! command -v dialog &> /dev/null; then
-    apt update -y
-    apt install dialog
+    sudo apt update -y
+    sudo apt install dialog -y
 fi
 
 # user select modules to install

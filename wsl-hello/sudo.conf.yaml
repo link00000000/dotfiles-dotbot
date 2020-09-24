@@ -1,0 +1,8 @@
+- defaults:
+    link:
+      create: true
+      force: true
+      relink: true
+
+- link:
+    /etc/pam.d/sudo: ./wsl-hello/sudo

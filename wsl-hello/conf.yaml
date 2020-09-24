@@ -4,12 +4,13 @@
       force: true
       relink: true
 
-- link:
-    # WSL
-    /etc/pam.d/sudo: ./wsl-hello/sudo
-
 - shell:
     - command: ./wsl-hello/install.sh
       stderr: true
       stdout: false
       stdin: false
+    
+    - command: sudo ./dotbot/bin/dotbot -d . -c ./wsl-hello/sudo.conf.yaml
+      stderr: true
+      stdout: true
+      stdin: true
